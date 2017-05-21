@@ -1,0 +1,9 @@
+<carousel [(activeSlide)]="activeSlide">
+  <slide *ngFor="let item of slides; let id = index" [@slideState]="(id==activeSlide)?'in':'out'" >
+    <img [src]="item.image" alt="Image">
+    <div class="carousel-caption">
+      <h3>{{item.title}}</h3>
+      <p>{{item.text}}</p>
+    </div>
+  </slide>
+</carousel>
